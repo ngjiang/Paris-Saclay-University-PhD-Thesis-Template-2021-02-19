@@ -1,12 +1,14 @@
 % created on 2019-12-13
 % @author : bmazoyer
-\documentclass[a4paper, twoside]{report}
+\documentclass[a4paper, twoside, 12pt]{report}
 \usepackage[utf8]{inputenc}
+\usepackage{CJKutf8}
+\usepackage{sansmathfonts}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{geometry}
 \geometry{
-left=16mm,
+left=32mm,
 top=30mm,
 right=16mm,
 bottom=30mm
@@ -23,14 +25,26 @@ bottom=30mm
 \usepackage{afterpage}
 \usepackage{setspace}
 \usepackage{pgffor}
+
+\usepackage{tikz}
+\usepackage{colortbl}
+\usepackage{amsmath}
+\usepackage{amssymb}
 \setlength{\columnseprule}{0pt}
 \setlength\columnsep{10pt}
+\setlength{\parskip}{1em}
 
 \newcommand\blankpage{%
     \null
     \thispagestyle{empty}%
     \addtocounter{page}{-1}%
     \newpage}
+
+\newcommand\blankpagewithcount{%
+    \null
+    \thispagestyle{empty}%
+    \newpage}
+
 
 %Bibliography style
 \usepackage[square, numbers]{natbib}
@@ -41,6 +55,7 @@ bottom=30mm
 
 % Name
 \newcommand{\PhDname}{FirstName LastName} 
+\newcommand{\PhDName}{FirstName LASTNAME} 
 
 % Change this variable if you add or remove chapters
 \newcommand*{\NumOfChapters}{5}
@@ -74,7 +89,7 @@ bottom=30mm
     
 
     \foreach \i in {1,2,...,\NumOfChapters}{
-        \input{\i}
+        \input{chapters/\i}
         \cleardoublepage
     }
     
@@ -85,7 +100,8 @@ bottom=30mm
     }
     
     \bibliography{bibliography.bib}
-    \pagebreak
+    \cleardoublepage
     
+    \afterpage{\blankpage}
     \input{layout/lastpage.tex}
 \end{document}

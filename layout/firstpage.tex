@@ -2,12 +2,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Modèle pour la 1ère de couverture des thèses préparées à l'Université Paris-Saclay, basé sur le modèle produit par Guillaume BRIGOT / Template for back cover of thesis made at Université Paris-Saclay, based on the template made by Guillaume BRIGOT
 %%% Mis à jour par Aurélien ARNOUX (École polytechnique)/ Updated by Aurélien ARNOUX (École polytechnique)
+%%% Mis à jour par Nan JIANG (Université Paris-Saclay) en adaptant le modèle proposé par frederic.mazaleyrat@ens-paris-saclay.fr / Updated by Nan JIANG (Université Paris-Saclay) by adapting the model proposed by frederic.mazaleyrat@ens-paris-saclay.fr 
 %%% Les instructions concernant chaque donnée à remplir sont données en bloc de commentaire / Rules to fill this file are given in comment blocks
 %%% ATTENTION Ces informations doivent tenir sur une seule page une fois compilées / WARNING These informations must contain in no more than one page once compiled
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Version du 23 mai 2019 (Merci à Thibault CHEVALÉRIAS (CEA) pour ses suggestions et corrections)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Version du 09 avril 2021 (basée sur le modèle de couverture du 19 février 2021)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\begin{titlepage}
 
 \label{form_first}
 
@@ -22,7 +24,8 @@
 \newcommand{\ecodocacro}{Sigle}																%% Sigle de l'ED. Voir site de l'Université Paris-Saclay / Acronym of the Doctoral School. See Université Paris-Saclay website
 \newcommand{\ecodocnum}{000} 																%% Numéro de l'école doctorale / Doctoral School number
 \newcommand{\PhDspeciality}{voir spécialités par l'ED} 										%% Spécialité de doctorat / Speciality 
-\newcommand{\PhDworkingplace}{Nom de l'établissement} 										%% Établissement de préparation / PhD working place : l'Université Paris-Sud, l'Université de Versailles-Saint-Quentin-en-Yvelines, l'Université d'Evry-Val-d'Essonne, l'Institut des sciences et industries du vivant et de l'environnement (AgroParisTech), CentraleSupélec,l'Ecole normale supérieure de Cachan, l'Ecole Polytechnique, l'Ecole nationale supérieure de techniques avancées, l'Ecole nationale de la statistique et de l’administration économique, HEC Paris, l'Institut d'optique théorique et appliquée, Télécom ParisTech, Télécom SudParis   
+\newcommand{\PhDresearchunit}{Nom de unité de recherche} 									%% Unité de recherche / Research Unit : il faut sélectionner votre unité de recherche via la barre de sélection depuis cette page web : https://www.universite-paris-saclay.fr/fr/signature et copier-coller l’adresse de l’unité de recherche sur la couverture de thèse.
+\newcommand{\PhDreferent}{Nom de référent} 													%% Référent / Referent : Pour ceux qui avaient été jusqu’ici inscrits en doctorat à l’Université Paris-Sud, votre référent est l’une des composantes ci-dessous : Faculté de droit, économie et gestion, Faculté de médecine, Faculté de pharmacie, Faculté des sciences d’Orsay, Faculté des sciences du sport; Pour les autres, indiquer : AgroParisTech, Institut d’Optique, ENS Paris-Saclay, CentraleSupélec, Université de Versailles -Saint-Quentin-en-Yvelines, Université d'Évry Val d’Essonne, Ecole Nationale d’Architecture de Versailles
 \newcommand{\defenseplace}{Ville de soutenance} 											%% Ville de soutenance / Place of defense
 \newcommand{\defensedate}{Date} 															%% Date de soutenance / Date of defense
 
@@ -105,40 +108,31 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\tikz[remember picture,overlay] \node[opacity=1,inner sep=0pt] at 
+(15mm,-115mm)
+{\includegraphics{media/Bandeau_UPaS_HD.pdf}};
 
-
-
-\thispagestyle{empty}
-.
-\begin{textblock}{5}(0,0)
-	\textblockcolour{bordeau}
-	\includegraphics [scale=1]{media/bande.png}
-	\vspace{300mm}
-\end{textblock}
-
-\begin{textblock}{1}(0.6,9.5)
-	
-	\Huge{\rotatebox{90}{\color{white}{\fontsize{38}{54}\selectfont Thèse de doctorat}}}
-\end{textblock}
-
-\begin{textblock}{1}(0.6,3)
-	\Large{\rotatebox{90}{\color{white}{NNT : \NNT}}}
-\end{textblock}
-
-\begin{textblock}{1}(\hpostt,\vpostt)
-	\textblockcolour{white}
-	\includegraphics[scale=1]{media/etab/\logoEtt.png}
-\end{textblock}
-
-\begin{textblock}{1}(\hpos,\vpos)
-	\textblockcolour{white}
-		\includegraphics[scale=1]{media/etab/\logoEt.png}	
-\end{textblock}
-
+%*****************************************************
+%******** NUMÉRO D'ORDRE DE LA THÈSE À COMPLÉTER *****
+%******** POUR LE SECOND DÉPOT                   *****
+%*****************************************************
+{
+\color{white}
+\begin{picture}(0,0)
+\put(-27,-655){\rotatebox{90}{NNT: \NNT}}
+\end{picture}
+} 
+%*****************************************************
+%**  LOGO  ÉTABLISSEMENT PARTENAIRE SI COTUTELLE
+%**  CHANGER L'IMAGE PAR DÉFAUT **
+%*****************************************************
+%\tikz[remember picture,overlay] \node[opacity=1,inner sep=0pt] at 
+%(140mm,20mm)
+%{\includegraphics[scale=1]{media/logo2.png}};
 
 %% Texte
 \begin{singlespace}
-\begin{textblock}{10}(5.7,3)
+\begin{textblock}{11}(4.2,2.)
 	\textblockcolour{white}
 	
 	\color{bordeau}
@@ -147,46 +141,46 @@
 		\huge{\PhDTitle} \bigskip %% Titre de la thèse 
 		\vfill
 		\color{black} %% Couleur noire du reste du texte
-		\normalsize {Thèse de doctorat de l'Université Paris-Saclay} \\
-		préparée à \PhDworkingplace \\ \bigskip
+		\normalsize {\bf Thèse de doctorat de l'Université Paris-Saclay} \bigskip\\
 		\vfill
-		École doctorale n$^{\circ}$\ecodocnum ~\ecodoctitle ~(\ecodocacro)  \\
-		
-		\small{Spécialité de doctorat: \PhDspeciality} \bigskip %% Spécialité 
-		\vfill  
-		\footnotesize{Thèse présentée et soutenue à \defenseplace, le \defensedate, par} \bigskip
+		École doctorale n$^{\circ}$\ecodocnum, ~\ecodoctitle ~(\ecodocacro) \\
+		\small{Spécialité de doctorat : \PhDspeciality} \\ %% Spécialité 
+		\footnotesize{Unité de recherche : \PhDresearchunit}  \\%% Spécialité 
+		\footnotesize{Référent : \PhDreferent}\bigskip \\ %% Spécialité 
+
+		\vspace{8mm}  
+		\small{\bf Thèse présentée et soutenue à \defenseplace, le \defensedate, par} \bigskip
 		\vfill
-		\Large{\textbf{\textsc{\PhDname}}} %% Nom du docteur
+		\Large{\color{bordeau}\textbf{\PhDName}} %% Nom du docteur
 		\vfill
 	\end{flushright}
-	
+	\vspace{10mm}
 	\color{black}
+
 	%% Jury
 	\begin{flushleft}
-		
-		\small Composition du Jury :
-	\end{flushleft}
+	\small \textbf{Composition du Jury :}
 	%% Members of the jury
-
-	\small
-	%\begin{center}
-	\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-	\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}lm{#1}}
-	
-	\label{jury} 																				%% Mettre à jour si des membres ont été ajoutés ou retirés / Update if members have been added or removed
-	\begin{flushleft}
-	\begin{tabular}{@{} L{9.5cm} R{4.5cm}}
-		\jurynameA  \\ \juryadressA & \juryroleA \\[5pt]
-		\jurynameB  \\ \juryadressB & \juryroleB \\[5pt]
-		\jurynameC  \\ \juryadressC & \juryroleC \\[5pt]
-		\jurynameD  \\ \juryadressD & \juryroleD \\[5pt]
-		\jurynameE  \\ \juryadressE & \juryroleE \\[5pt]
-		\jurynameF  \\ \juryadressF & \juryroleF \\[5pt]
-		\jurynameG  \\ \juryadressG & \juryroleG \\[5pt]
-		\jurynameH  \\ \juryadressH & \juryroleH \\[5pt]
+	\vfill
+	\footnotesize
+	\begin{tabular}{|p{10.5cm}l}
+		\arrayrulecolor{bordeau}
+		\textbf{\jurynameA} & \juryroleA  \\ \juryadressA \\[5pt]
+		\textbf{\jurynameB} & \juryroleB  \\ \juryadressB \\[5pt]
+		\textbf{\jurynameC} & \juryroleC  \\ \juryadressC \\[5pt]
+		\textbf{\jurynameD} & \juryroleD  \\ \juryadressD \\[5pt]
+		\textbf{\jurynameE} & \juryroleE  \\ \juryadressE \\[5pt]
+		\textbf{\jurynameF} & \juryroleF  \\ \juryadressF \\[5pt]
+	\end{tabular} 
+	\vfill
+	\begin{tabular}{p{10.5cm}l}
+		\textbf{\jurynameG} & \juryroleG  \\ \juryadressG \\[5pt]
+		\textbf{\jurynameH} & \juryroleH  \\ \juryadressH \\[5pt]
 	\end{tabular} 
 	\end{flushleft}   
-	%\end{center}
+% Mettre à jour si des membres ont été ajoutés ou retirés / Update if members have been added or removed
 \end{textblock}
 \end{singlespace}
-\afterpage{\blankpage}
+\end{titlepage}
+\afterpage{\blankpagewithcount}
+

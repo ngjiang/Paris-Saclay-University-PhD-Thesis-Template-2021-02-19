@@ -1,6 +1,6 @@
 # Latex template for my PhD thesis at Paris-Saclay University (Université Paris-Saclay)
 Please check on the 
-[university website](https://www.universite-paris-saclay.fr/fr/documents-de-reference-relatifs-a-la-soutenance-de-la-these) 
+[university website](https://www.universite-paris-saclay.fr/research/textes-de-reference/documents-de-reference-relatifs-la-soutenance-de-la-these) 
 that this template still matches their recommendations (first page and last page) before using it for yourself.
 
 
@@ -17,8 +17,8 @@ To add acknowledgements or a dedication, you should modify:
 * [layout/dedication](layout/dedication.tex)
 
 The content of the thesis chapters is in:
-* [1](1.tex)
-* [2](2.tex)
+* [chapters/1](chapters/1.tex)
+* [chapters/2](chapters/2.tex)
 ...
 
 The content of the appendices is in:
